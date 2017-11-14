@@ -1,0 +1,4 @@
+name = test base module
+description = Contains common base custom functionalities
+core = 7.x
+version = 7.x-0.1

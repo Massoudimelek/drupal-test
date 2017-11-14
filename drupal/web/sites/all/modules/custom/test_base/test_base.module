@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * Implement hook_block_info
+ * Declares new page title block
+ * @return mixed
+ */
+function test_base_block_info()
+{
+    $blocks['page_title'] = array(
+        // info: The name of the block.
+        'info' => t('Page title'),
+    );
+
+    return $blocks;
+}
+
+/**
+ * Implement hook_block_view
+ * Add the title to the page title block
+ * @param string $delta
+ * @return mixed
+ */
+function test_base_block_view($delta = '')
+{
+    // The $delta parameter tells us which block is being requested.
+    switch ($delta) {
+        case 'page_title':
+            // Create your block content here
+            $block['content'] = drupal_get_title();
+            break;
+    }
+
+    return $block;
+}

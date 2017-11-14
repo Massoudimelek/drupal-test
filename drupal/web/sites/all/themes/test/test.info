@@ -4,7 +4,7 @@ core = 7.x
 base theme = bartik
 
 
-
+regions[sticky_header] = Sticky header
 regions[header] = Header
 regions[help] = Help
 regions[page_top] = Page top
