@@ -87,9 +87,7 @@
 ?>
 <div id="page-wrapper">
     <div id="page">
-        <?php if ($page['sticky_header']): ?>
-            <?php print render($page['sticky_header']); ?>
-        <?php endif; ?>
+
         <div id="header" class="<?php print $secondary_menu ? 'with-secondary-menu' : 'without-secondary-menu'; ?>">
             <div class="section clearfix">
 
@@ -211,10 +209,10 @@
                             <div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
                         <a id="main-content"></a>
                         <?php print render($title_prefix); ?>
-                        <?php if ($title): ?>
-                            <h1 class="title" id="page-title">
-                                <?php print $title; ?>
-                            </h1>
+                        <?php if ($page['sticky_header']): ?>
+                            <div id="sticky-header-title">
+                                <?php print render($page['sticky_header']); ?>
+                            </div>
                         <?php endif; ?>
                         <?php print render($title_suffix); ?>
                         <?php if ($tabs): ?>

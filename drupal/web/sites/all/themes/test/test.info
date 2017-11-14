@@ -3,6 +3,7 @@ description = Bartik subtheme
 core = 7.x
 base theme = bartik
 
+stylesheets[all][] = css/style.css
 
 regions[sticky_header] = Sticky header
 regions[header] = Header
